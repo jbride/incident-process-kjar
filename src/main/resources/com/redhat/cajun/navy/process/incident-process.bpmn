@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_lhlNUElREemKwbbPFNrGrg" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_72v4gElREemKwbbPFNrGrg" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
   <bpmn2:itemDefinition id="_incidentItem" structureRef="Object"/>
   <bpmn2:itemDefinition id="_destinationsItem" structureRef="Object"/>
   <bpmn2:itemDefinition id="_missionItem" structureRef="Object"/>
@@ -21,8 +21,8 @@
       <bpmn2:incoming>_DD6360C8-91F7-4D81-AE6D-4E0441F990BD</bpmn2:incoming>
       <bpmn2:outgoing>_61E43201-3C6B-4818-B21D-944738D14ABE</bpmn2:outgoing>
       <bpmn2:script><![CDATA[com.redhat.cajun.navy.rules.model.Mission _mission = new com.redhat.cajun.navy.rules.model.Mission();
-String _incidentId = (String)kcontext.getVariable("incident");
-_mission.setIncidentId(_incidentId);
+com.redhat.cajun.navy.rules.model.Incident _incident = (com.redhat.cajun.navy.rules.model.Incident)kcontext.getVariable("incident");
+_mission.setIncidentId(_incident.getId());
 _mission.setIncidentLat(new BigDecimal("30.12345"));
 _mission.setIncidentLong(new BigDecimal("-70.98765"));
 _mission.setResponderId("responderId");
@@ -48,38 +48,38 @@ kcontext.setVariable("mission", _mission);
       </bpmn2:extensionElements>
       <bpmn2:incoming>_61E43201-3C6B-4818-B21D-944738D14ABE</bpmn2:incoming>
       <bpmn2:outgoing>_8BC28AEF-FC65-4CAE-8772-2FE2594BBB62</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_lhlNUUlREemKwbbPFNrGrg">
+      <bpmn2:ioSpecification id="_72v4gUlREemKwbbPFNrGrg">
         <bpmn2:dataInput id="_C33D7763-C043-4A43-9B22-746A56442929_MessageTypeInputX" drools:dtype="String" itemSubjectRef="__C33D7763-C043-4A43-9B22-746A56442929_MessageTypeInputXItem" name="MessageType"/>
         <bpmn2:dataInput id="_C33D7763-C043-4A43-9B22-746A56442929_PayloadInputX" drools:dtype="java.lang.Object" itemSubjectRef="__C33D7763-C043-4A43-9B22-746A56442929_PayloadInputXItem" name="Payload"/>
         <bpmn2:dataInput id="_C33D7763-C043-4A43-9B22-746A56442929_TaskNameInputX" drools:dtype="Object" name="TaskName"/>
-        <bpmn2:inputSet id="_lhlNUklREemKwbbPFNrGrg">
+        <bpmn2:inputSet id="_72v4gklREemKwbbPFNrGrg">
           <bpmn2:dataInputRefs>_C33D7763-C043-4A43-9B22-746A56442929_MessageTypeInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_C33D7763-C043-4A43-9B22-746A56442929_PayloadInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_C33D7763-C043-4A43-9B22-746A56442929_TaskNameInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_lhlNU0lREemKwbbPFNrGrg">
+      <bpmn2:dataInputAssociation id="_72v4g0lREemKwbbPFNrGrg">
         <bpmn2:targetRef>_C33D7763-C043-4A43-9B22-746A56442929_MessageTypeInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_lhlNVElREemKwbbPFNrGrg">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_lhlNVUlREemKwbbPFNrGrg"><![CDATA[CreateMissionCommand]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_lhlNVklREemKwbbPFNrGrg">_C33D7763-C043-4A43-9B22-746A56442929_MessageTypeInputX</bpmn2:to>
+        <bpmn2:assignment id="_72v4hElREemKwbbPFNrGrg">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_72v4hUlREemKwbbPFNrGrg"><![CDATA[CreateMissionCommand]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_72v4hklREemKwbbPFNrGrg">_C33D7763-C043-4A43-9B22-746A56442929_MessageTypeInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_lhlNV0lREemKwbbPFNrGrg">
+      <bpmn2:dataInputAssociation id="_72v4h0lREemKwbbPFNrGrg">
         <bpmn2:sourceRef>mission</bpmn2:sourceRef>
         <bpmn2:targetRef>_C33D7763-C043-4A43-9B22-746A56442929_PayloadInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_lhlNWElREemKwbbPFNrGrg">
+      <bpmn2:dataInputAssociation id="_72v4iElREemKwbbPFNrGrg">
         <bpmn2:targetRef>_C33D7763-C043-4A43-9B22-746A56442929_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_lhlNWUlREemKwbbPFNrGrg">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_lhlNWklREemKwbbPFNrGrg"><![CDATA[SendMessage]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_lhlNW0lREemKwbbPFNrGrg">_C33D7763-C043-4A43-9B22-746A56442929_TaskNameInputX</bpmn2:to>
+        <bpmn2:assignment id="_72v4iUlREemKwbbPFNrGrg">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_72v4iklREemKwbbPFNrGrg"><![CDATA[SendMessage]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_72v4i0lREemKwbbPFNrGrg">_C33D7763-C043-4A43-9B22-746A56442929_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
     </bpmn2:task>
   </bpmn2:process>
-  <bpmndi:BPMNDiagram id="_lhlNXElREemKwbbPFNrGrg">
-    <bpmndi:BPMNPlane id="_lhlNXUlREemKwbbPFNrGrg" bpmnElement="incident-process">
+  <bpmndi:BPMNDiagram id="_72v4jElREemKwbbPFNrGrg">
+    <bpmndi:BPMNPlane id="_72wfkElREemKwbbPFNrGrg" bpmnElement="incident-process">
       <bpmndi:BPMNShape id="shape__C33D7763-C043-4A43-9B22-746A56442929" bpmnElement="_C33D7763-C043-4A43-9B22-746A56442929">
         <dc:Bounds height="102.0" width="154.0" x="551.0" y="77.0"/>
       </bpmndi:BPMNShape>
@@ -106,12 +106,12 @@ kcontext.setVariable("mission", _mission);
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
-  <bpmn2:relationship id="_lhl0YElREemKwbbPFNrGrg" type="BPSimData">
+  <bpmn2:relationship id="_72wfkUlREemKwbbPFNrGrg" type="BPSimData">
     <bpmn2:extensionElements>
       <bpsim:BPSimData>
         <bpsim:Scenario xsi:type="bpsim:Scenario" id="default" name="Simulationscenario">
           <bpsim:ScenarioParameters xsi:type="bpsim:ScenarioParameters"/>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_C33D7763-C043-4A43-9B22-746A56442929" id="_lhl0YUlREemKwbbPFNrGrg">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_C33D7763-C043-4A43-9B22-746A56442929" id="_72wfkklREemKwbbPFNrGrg">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -131,14 +131,14 @@ kcontext.setVariable("mission", _mission);
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_3B8DC04B-3949-4A09-A46A-F87FE2712932" id="_lhl0YklREemKwbbPFNrGrg">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_3B8DC04B-3949-4A09-A46A-F87FE2712932" id="_72wfk0lREemKwbbPFNrGrg">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
               </bpsim:ProcessingTime>
             </bpsim:TimeParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_76D5FFDD-B291-46B2-B210-52C05F1C0719" id="_lhl0Y0lREemKwbbPFNrGrg">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_76D5FFDD-B291-46B2-B210-52C05F1C0719" id="_72wflElREemKwbbPFNrGrg">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -161,7 +161,7 @@ kcontext.setVariable("mission", _mission);
         </bpsim:Scenario>
       </bpsim:BPSimData>
     </bpmn2:extensionElements>
-    <bpmn2:source>_lhlNUElREemKwbbPFNrGrg</bpmn2:source>
-    <bpmn2:target>_lhlNUElREemKwbbPFNrGrg</bpmn2:target>
+    <bpmn2:source>_72v4gElREemKwbbPFNrGrg</bpmn2:source>
+    <bpmn2:target>_72v4gElREemKwbbPFNrGrg</bpmn2:target>
   </bpmn2:relationship>
 </bpmn2:definitions>
