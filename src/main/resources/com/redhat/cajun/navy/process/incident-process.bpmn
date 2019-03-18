@@ -23,13 +23,13 @@
       <bpmn2:script><![CDATA[com.redhat.cajun.navy.rules.model.Mission _mission = new com.redhat.cajun.navy.rules.model.Mission();
 com.redhat.cajun.navy.rules.model.Incident _incident = (com.redhat.cajun.navy.rules.model.Incident)kcontext.getVariable("incident");
 _mission.setIncidentId(_incident.getId());
-_mission.setIncidentLat(new BigDecimal("30.12345"));
-_mission.setIncidentLong(new BigDecimal("-70.98765"));
+_mission.setIncidentLat(new java.math.BigDecimal("30.12345"));
+_mission.setIncidentLong(new java.math.BigDecimal("-70.98765"));
 _mission.setResponderId("responderId");
-_mission.setResponderStartLat(new BigDecimal("31.12345"));
-_mission.setResponderStartLong(new BigDecimal("-71.98765"));
-_mission.setDestinationLat(new BigDecimal("32.12345"));
-_mission.setDestinationLong(new BigDecimal("-72.98765"));
+_mission.setResponderStartLat(new java.math.BigDecimal("31.12345"));
+_mission.setResponderStartLong(new java.math.BigDecimal("-71.98765"));
+_mission.setDestinationLat(new java.math.BigDecimal("32.12345"));
+_mission.setDestinationLong(new java.math.BigDecimal("-72.98765"));
 kcontext.setVariable("mission", _mission);
 
 ]]></bpmn2:script>
