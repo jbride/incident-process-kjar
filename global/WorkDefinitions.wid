@@ -55,6 +55,16 @@
     "displayName" : "REST",
     "icon" : "defaultservicenodeicon.png"
   ],
+  
+  [
+    "name" : "SendMessage",
+    "parameters" : [
+        "MessageType" : new StringDataType(),
+        "Payload" : new ObjectDataType()
+    ],
+    "displayName" : "Send Kafka Message",
+    "icon" : "defaultservicenodeicon.png"
+  ],
 
   [
      "name" : "BusinessRuleTask",
