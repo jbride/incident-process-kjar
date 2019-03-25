@@ -65,6 +65,15 @@
     "displayName" : "Send Kafka Message",
     "icon" : "defaultservicenodeicon.png"
   ],
+  
+  [
+    "name" : "ResponderService",
+    "results" : [
+        "Responders" : new ObjectDataType(),
+    ],
+    "displayName" : "Responder Service",
+    "icon" : "defaultservicenodeicon.png"
+  ],
 
   [
      "name" : "BusinessRuleTask",
