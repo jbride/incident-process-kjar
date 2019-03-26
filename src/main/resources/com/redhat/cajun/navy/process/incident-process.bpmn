@@ -134,7 +134,12 @@ return (_mission.getStatus() == com.redhat.cajun.navy.rules.model.Status.UNASSIG
         <bpmn2:targetRef>mission</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
     </bpmn2:task>
-    <bpmn2:intermediateCatchEvent id="_17ADEC3A-D8FE-4025-B87F-825F5E77D3F2">
+    <bpmn2:intermediateCatchEvent id="_17ADEC3A-D8FE-4025-B87F-825F5E77D3F2" name="timer">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[timer]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
       <bpmn2:incoming>_C87930BA-B7FD-4595-AE91-930DE445CEDC</bpmn2:incoming>
       <bpmn2:outgoing>_6E11452C-E0E4-4DD8-8CED-59ED61E8FBFB</bpmn2:outgoing>
       <bpmn2:timerEventDefinition id="_nARKfVALEemKwbbPFNrGrg">
@@ -181,7 +186,12 @@ return (_mission.getStatus() == com.redhat.cajun.navy.rules.model.Status.UNASSIG
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
     </bpmn2:task>
-    <bpmn2:intermediateCatchEvent id="_DBCF20C3-4FB8-4D62-8C99-C7F90444211B">
+    <bpmn2:intermediateCatchEvent id="_DBCF20C3-4FB8-4D62-8C99-C7F90444211B" name="signal1">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[signal1]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
       <bpmn2:incoming>_2DAF18ED-ED45-47B9-8E96-19C8873A7370</bpmn2:incoming>
       <bpmn2:outgoing>_143FACA9-0CB7-46F6-AB21-57071A2815EA</bpmn2:outgoing>
       <bpmn2:dataOutput id="_DBCF20C3-4FB8-4D62-8C99-C7F90444211B_ResponseOutputX" drools:dtype="Boolean" itemSubjectRef="__DBCF20C3-4FB8-4D62-8C99-C7F90444211B_ResponseOutputXItem" name="Response"/>
