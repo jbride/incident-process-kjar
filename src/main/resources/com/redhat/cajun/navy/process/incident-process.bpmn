@@ -5,6 +5,7 @@
   <bpmn2:itemDefinition id="_missionItem" structureRef="Object"/>
   <bpmn2:itemDefinition id="_respondersItem" structureRef="Object"/>
   <bpmn2:itemDefinition id="_responderIsAvailableItem" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_assignmentDelayItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__0B80F528-BF03-4FB3-A670-54948F83F2CD_RespondersOutputXItem" structureRef="java.lang.Object"/>
   <bpmn2:itemDefinition id="__3CB51759-011B-4ACB-AD39-2B9DAD7A58DE_MessageTypeInputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__3CB51759-011B-4ACB-AD39-2B9DAD7A58DE_PayloadInputXItem" structureRef="java.lang.Object"/>
@@ -26,6 +27,7 @@
     <bpmn2:property id="mission" itemSubjectRef="_missionItem" name="mission"/>
     <bpmn2:property id="responders" itemSubjectRef="_respondersItem" name="responders"/>
     <bpmn2:property id="responderIsAvailable" itemSubjectRef="_responderIsAvailableItem" name="responderIsAvailable"/>
+    <bpmn2:property id="assignmentDelay" itemSubjectRef="_assignmentDelayItem" name="assignmentDelay"/>
     <bpmn2:sequenceFlow id="_2DAF18ED-ED45-47B9-8E96-19C8873A7370" sourceRef="_7D98268D-FD97-4C06-A9D4-CCCF9919D5D7" targetRef="_DBCF20C3-4FB8-4D62-8C99-C7F90444211B"/>
     <bpmn2:sequenceFlow id="_415A5764-D130-49AA-9019-855997E8DD75" sourceRef="_23E4B197-0C84-48CF-8D62-46C1687B8118" targetRef="_3CB51759-011B-4ACB-AD39-2B9DAD7A58DE">
       <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_nARKYVALEemKwbbPFNrGrg" language="http://www.java.com/java"><![CDATA[Boolean _isAvailable = (Boolean)kcontext.getVariable("responderIsAvailable");
@@ -136,7 +138,7 @@ return (_mission.getStatus() == com.redhat.cajun.navy.rules.model.Status.UNASSIG
       <bpmn2:incoming>_C87930BA-B7FD-4595-AE91-930DE445CEDC</bpmn2:incoming>
       <bpmn2:outgoing>_6E11452C-E0E4-4DD8-8CED-59ED61E8FBFB</bpmn2:outgoing>
       <bpmn2:timerEventDefinition id="_nARKfVALEemKwbbPFNrGrg">
-        <bpmn2:timeDuration xsi:type="bpmn2:tFormalExpression" id="_nARKflALEemKwbbPFNrGrg">PT30S</bpmn2:timeDuration>
+        <bpmn2:timeDuration xsi:type="bpmn2:tFormalExpression" id="_nARKflALEemKwbbPFNrGrg">#{assignmentDelay}</bpmn2:timeDuration>
       </bpmn2:timerEventDefinition>
     </bpmn2:intermediateCatchEvent>
     <bpmn2:task id="_7D98268D-FD97-4C06-A9D4-CCCF9919D5D7" drools:taskName="SendMessage" name="Verify Responder Available command">
