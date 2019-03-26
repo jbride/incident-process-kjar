@@ -172,11 +172,8 @@ return (_mission.getStatus() == com.redhat.cajun.navy.rules.model.Status.UNASSIG
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
       <bpmn2:dataInputAssociation id="_nARKhVALEemKwbbPFNrGrg">
+        <bpmn2:sourceRef>mission</bpmn2:sourceRef>
         <bpmn2:targetRef>_7D98268D-FD97-4C06-A9D4-CCCF9919D5D7_PayloadInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_nARKhlALEemKwbbPFNrGrg">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_nARKh1ALEemKwbbPFNrGrg"><![CDATA[#{mission.responderId}]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_nARKiFALEemKwbbPFNrGrg">_7D98268D-FD97-4C06-A9D4-CCCF9919D5D7_PayloadInputX</bpmn2:to>
-        </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
       <bpmn2:dataInputAssociation id="_nARKiVALEemKwbbPFNrGrg">
         <bpmn2:targetRef>_7D98268D-FD97-4C06-A9D4-CCCF9919D5D7_TaskNameInputX</bpmn2:targetRef>
