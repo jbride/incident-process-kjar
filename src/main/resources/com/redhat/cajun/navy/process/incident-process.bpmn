@@ -228,7 +228,7 @@ kcontext.setVariable("mission",_mission);]]></drools:script>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_E77FF997-F866-4B5E-8E11-0AED2E4A258C</bpmn2:incoming>
       <bpmn2:outgoing>_C3E80BB7-F7A8-4610-AEFC-CDADCA7D1E05</bpmn2:outgoing>
-      <bpmn2:script><![CDATA[kcontext.setVariable("nrAssignments, new Integer(0)");]]></bpmn2:script>
+      <bpmn2:script><![CDATA[kcontext.setVariable("nrAssignments", new Integer(0));]]></bpmn2:script>
     </bpmn2:scriptTask>
     <bpmn2:intermediateCatchEvent id="_17ADEC3A-D8FE-4025-B87F-825F5E77D3F2" name="timer">
       <bpmn2:extensionElements>
