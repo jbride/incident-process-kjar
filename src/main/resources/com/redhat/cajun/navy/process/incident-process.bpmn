@@ -263,7 +263,7 @@ kcontext.setVariable("mission",_mission);]]></drools:script>
     <bpmn2:task id="_7D98268D-FD97-4C06-A9D4-CCCF9919D5D7" drools:taskName="SendMessage" name="Verify Responder Available command">
       <bpmn2:extensionElements>
         <drools:metaData name="elementname">
-          <drools:metaValue><![CDATA[Verify Responder Available command]]></drools:metaValue>
+          <drools:metaValue><![CDATA[Verify Responder Available]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_7F8F5F06-906E-4A92-A098-66BC79DC4267</bpmn2:incoming>
@@ -281,7 +281,7 @@ kcontext.setVariable("mission",_mission);]]></drools:script>
       <bpmn2:dataInputAssociation id="_fuwqHFBrEemKwbbPFNrGrg">
         <bpmn2:targetRef>_7D98268D-FD97-4C06-A9D4-CCCF9919D5D7_MessageTypeInputX</bpmn2:targetRef>
         <bpmn2:assignment id="_fuwqHVBrEemKwbbPFNrGrg">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_fuwqHlBrEemKwbbPFNrGrg"><![CDATA[VerifyResponderAvailableCommand]]></bpmn2:from>
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_fuwqHlBrEemKwbbPFNrGrg"><![CDATA[UpdateResponderCommand]]></bpmn2:from>
           <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_fuwqH1BrEemKwbbPFNrGrg">_7D98268D-FD97-4C06-A9D4-CCCF9919D5D7_MessageTypeInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
