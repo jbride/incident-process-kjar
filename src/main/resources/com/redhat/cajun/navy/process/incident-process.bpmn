@@ -21,7 +21,7 @@
   <bpmn2:itemDefinition id="__094B43BD-DDA1-49D3-B554-422EF1F9A610_MissionOutputXItem" structureRef="Object"/>
   <bpmn2:itemDefinition id="__3CB51759-011B-4ACB-AD39-2B9DAD7A58DE_MessageTypeInputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__3CB51759-011B-4ACB-AD39-2B9DAD7A58DE_PayloadInputXItem" structureRef="java.lang.Object"/>
-  <bpmn2:signal id="_fa2422dd-0263-3bbe-bd45-ba3444d91e65" name="ResponderAvailableEvent"/>
+  <bpmn2:signal id="_fa2422dd-0263-3bbe-bd45-ba3444d91e65" name="ResponderAvailable"/>
   <bpmn2:process id="incident-process" drools:packageName="com.redhat.cajun.navy.process" drools:version="1.0" drools:adHoc="false" name="incident-process" isExecutable="true">
     <bpmn2:property id="incident" itemSubjectRef="_incidentItem" name="incident"/>
     <bpmn2:property id="destinations" itemSubjectRef="_destinationsItem" name="destinations"/>
@@ -84,7 +84,7 @@ return (!_isAvailable);]]></bpmn2:conditionExpression>
       <bpmn2:dataInputAssociation id="_fuwC91BrEemKwbbPFNrGrg">
         <bpmn2:targetRef>_3CB51759-011B-4ACB-AD39-2B9DAD7A58DE_MessageTypeInputX</bpmn2:targetRef>
         <bpmn2:assignment id="_fuwC-FBrEemKwbbPFNrGrg">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_fuwC-VBrEemKwbbPFNrGrg"><![CDATA[CreateMissionCommand]]></bpmn2:from>
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_fuwC-VBrEemKwbbPFNrGrg"><![CDATA[CreateMission]]></bpmn2:from>
           <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_fuwC-lBrEemKwbbPFNrGrg">_3CB51759-011B-4ACB-AD39-2B9DAD7A58DE_MessageTypeInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
@@ -260,10 +260,10 @@ kcontext.setVariable("mission",_mission);]]></drools:script>
       </bpmn2:outputSet>
       <bpmn2:signalEventDefinition id="_fuwqGVBrEemKwbbPFNrGrg" signalRef="_fa2422dd-0263-3bbe-bd45-ba3444d91e65"/>
     </bpmn2:intermediateCatchEvent>
-    <bpmn2:task id="_7D98268D-FD97-4C06-A9D4-CCCF9919D5D7" drools:taskName="SendMessage" name="Set Responder Unavailable">
+    <bpmn2:task id="_7D98268D-FD97-4C06-A9D4-CCCF9919D5D7" drools:taskName="SendMessage" name="Update Responder Availability">
       <bpmn2:extensionElements>
         <drools:metaData name="elementname">
-          <drools:metaValue><![CDATA[Set Responder Unavailable]]></drools:metaValue>
+          <drools:metaValue><![CDATA[Update Responder Availability]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_7F8F5F06-906E-4A92-A098-66BC79DC4267</bpmn2:incoming>
@@ -281,7 +281,7 @@ kcontext.setVariable("mission",_mission);]]></drools:script>
       <bpmn2:dataInputAssociation id="_fuwqHFBrEemKwbbPFNrGrg">
         <bpmn2:targetRef>_7D98268D-FD97-4C06-A9D4-CCCF9919D5D7_MessageTypeInputX</bpmn2:targetRef>
         <bpmn2:assignment id="_fuwqHVBrEemKwbbPFNrGrg">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_fuwqHlBrEemKwbbPFNrGrg"><![CDATA[SetResponderUnavailableCommand]]></bpmn2:from>
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_fuwqHlBrEemKwbbPFNrGrg"><![CDATA[SetResponderUnavailable]]></bpmn2:from>
           <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_fuwqH1BrEemKwbbPFNrGrg">_7D98268D-FD97-4C06-A9D4-CCCF9919D5D7_MessageTypeInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
@@ -302,10 +302,10 @@ kcontext.setVariable("mission",_mission);]]></drools:script>
       <bpmn2:outgoing>_71008334-5FF5-40C2-AE69-34ADB15C0678</bpmn2:outgoing>
       <bpmn2:outgoing>_415A5764-D130-49AA-9019-855997E8DD75</bpmn2:outgoing>
     </bpmn2:exclusiveGateway>
-    <bpmn2:scriptTask id="_BB912F76-78F8-43C2-A822-E08E871BFCFD" name="Number of Assignments" scriptFormat="http://www.java.com/java">
+    <bpmn2:scriptTask id="_BB912F76-78F8-43C2-A822-E08E871BFCFD" name="Increase Number of Assignments" scriptFormat="http://www.java.com/java">
       <bpmn2:extensionElements>
         <drools:metaData name="elementname">
-          <drools:metaValue><![CDATA[Number of Assignments]]></drools:metaValue>
+          <drools:metaValue><![CDATA[Increase Number of Assignments]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_ED184149-9012-467E-A445-44435EB8E5BE</bpmn2:incoming>
@@ -339,7 +339,7 @@ kcontext.setVariable("nrAssignments", new Integer(i + 1));]]></bpmn2:script>
         <dc:Bounds height="56.0" width="56.0" x="1930.0" y="100.0"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__D69430C6-5B68-4104-AAD1-E1B1104AE6A4" bpmnElement="_D69430C6-5B68-4104-AAD1-E1B1104AE6A4">
-        <dc:Bounds height="56.0" width="56.0" x="978.0" y="321.0"/>
+        <dc:Bounds height="56.0" width="56.0" x="973.0" y="321.0"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__BB949EFE-DB0B-44D3-90BB-6C844FDCA9C1" bpmnElement="_BB949EFE-DB0B-44D3-90BB-6C844FDCA9C1">
         <dc:Bounds height="56.0" width="56.0" x="972.0" y="100.0"/>
@@ -385,13 +385,13 @@ kcontext.setVariable("nrAssignments", new Integer(i + 1));]]></bpmn2:script>
       <bpmndi:BPMNEdge id="edge_shape__23E4B197-0C84-48CF-8D62-46C1687B8118_to_shape__D69430C6-5B68-4104-AAD1-E1B1104AE6A4" bpmnElement="_71008334-5FF5-40C2-AE69-34ADB15C0678">
         <di:waypoint xsi:type="dc:Point" x="1531.0" y="128.0"/>
         <di:waypoint xsi:type="dc:Point" x="1531.0" y="349.0"/>
-        <di:waypoint xsi:type="dc:Point" x="1006.0" y="349.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1001.0" y="349.0"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__BB949EFE-DB0B-44D3-90BB-6C844FDCA9C1_to_shape__D69430C6-5B68-4104-AAD1-E1B1104AE6A4" bpmnElement="_247EC481-F364-4EF6-AC15-4E4441FFD353">
         <di:waypoint xsi:type="dc:Point" x="1000.0" y="128.0"/>
-        <di:waypoint xsi:type="dc:Point" x="1003.0" y="245.0"/>
-        <di:waypoint xsi:type="dc:Point" x="1003.0" y="265.0"/>
-        <di:waypoint xsi:type="dc:Point" x="1006.0" y="349.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1001.0" y="157.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1001.0" y="157.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1001.0" y="349.0"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__D69430C6-5B68-4104-AAD1-E1B1104AE6A4_to_shape__17ADEC3A-D8FE-4025-B87F-825F5E77D3F2" bpmnElement="_C87930BA-B7FD-4595-AE91-930DE445CEDC">
         <di:waypoint xsi:type="dc:Point" x="1006.0" y="349.0"/>
@@ -412,7 +412,7 @@ kcontext.setVariable("nrAssignments", new Integer(i + 1));]]></bpmn2:script>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__BB912F76-78F8-43C2-A822-E08E871BFCFD_to_shape__2D339675-C539-4198-93FA-F6524BBFCA4B" bpmnElement="_6E11452C-E0E4-4DD8-8CED-59ED61E8FBFB">
         <di:waypoint xsi:type="dc:Point" x="611.0" y="349.0"/>
-        <di:waypoint xsi:type="dc:Point" x="435.0" y="349.0"/>
+        <di:waypoint xsi:type="dc:Point" x="429.0" y="349.0"/>
         <di:waypoint xsi:type="dc:Point" x="429.0" y="128.0"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__DBCF20C3-4FB8-4D62-8C99-C7F90444211B_to_shape__23E4B197-0C84-48CF-8D62-46C1687B8118" bpmnElement="_143FACA9-0CB7-46F6-AB21-57071A2815EA">
