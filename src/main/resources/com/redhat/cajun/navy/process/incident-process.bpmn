@@ -258,6 +258,7 @@ return (_mission.getStatus() == com.redhat.cajun.navy.rules.model.Status.UNASSIG
           <bpmn2:dataInputRefs>_3CB51759-011B-4ACB-AD39-2B9DAD7A58DE_PayloadInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_3CB51759-011B-4ACB-AD39-2B9DAD7A58DE_TaskNameInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
+        <bpmn2:outputSet></bpmn2:outputSet>
       </bpmn2:ioSpecification>
       <bpmn2:dataInputAssociation id="_OEvS5VfTEemwcNEeVCT4gg">
         <bpmn2:targetRef>_3CB51759-011B-4ACB-AD39-2B9DAD7A58DE_MessageTypeInputX</bpmn2:targetRef>
@@ -344,6 +345,7 @@ kcontext.setVariable("mission",_mission);]]></drools:script>
           <bpmn2:dataInputRefs>_7D98268D-FD97-4C06-A9D4-CCCF9919D5D7_PayloadInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_7D98268D-FD97-4C06-A9D4-CCCF9919D5D7_TaskNameInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
+        <bpmn2:outputSet></bpmn2:outputSet>
       </bpmn2:ioSpecification>
       <bpmn2:dataInputAssociation id="_OEvS-FfTEemwcNEeVCT4gg">
         <bpmn2:targetRef>_7D98268D-FD97-4C06-A9D4-CCCF9919D5D7_MessageTypeInputX</bpmn2:targetRef>
@@ -386,6 +388,7 @@ kcontext.setVariable("incident",_incident);]]></drools:script>
           <bpmn2:dataInputRefs>_2B28FE5C-A836-40C4-BDF5-E2DA580BFA39_PayloadInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_2B28FE5C-A836-40C4-BDF5-E2DA580BFA39_TaskNameInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
+        <bpmn2:outputSet></bpmn2:outputSet>
       </bpmn2:ioSpecification>
       <bpmn2:dataInputAssociation id="_OEvTA1fTEemwcNEeVCT4gg">
         <bpmn2:targetRef>_2B28FE5C-A836-40C4-BDF5-E2DA580BFA39_MessageTypeInputX</bpmn2:targetRef>
@@ -542,6 +545,7 @@ kcontext.setVariable("incident",_incident);]]></drools:script>
             <bpmn2:dataInputRefs>_93C12473-05B0-4FEB-B870-33241B2BE8AB_PayloadInputX</bpmn2:dataInputRefs>
             <bpmn2:dataInputRefs>_93C12473-05B0-4FEB-B870-33241B2BE8AB_TaskNameInputX</bpmn2:dataInputRefs>
           </bpmn2:inputSet>
+          <bpmn2:outputSet></bpmn2:outputSet>
         </bpmn2:ioSpecification>
         <bpmn2:dataInputAssociation id="_OEvTD1fTEemwcNEeVCT4gg">
           <bpmn2:targetRef>_93C12473-05B0-4FEB-B870-33241B2BE8AB_MessageTypeInputX</bpmn2:targetRef>
@@ -604,6 +608,7 @@ kcontext.setVariable("incident",_incident);]]></drools:script>
             <bpmn2:dataInputRefs>_76F16D10-53AE-490E-9819-9B33B7DF044A_PayloadInputX</bpmn2:dataInputRefs>
             <bpmn2:dataInputRefs>_76F16D10-53AE-490E-9819-9B33B7DF044A_TaskNameInputX</bpmn2:dataInputRefs>
           </bpmn2:inputSet>
+          <bpmn2:outputSet></bpmn2:outputSet>
         </bpmn2:ioSpecification>
         <bpmn2:dataInputAssociation id="_OEvTHFfTEemwcNEeVCT4gg">
           <bpmn2:targetRef>_76F16D10-53AE-490E-9819-9B33B7DF044A_MessageTypeInputX</bpmn2:targetRef>
@@ -659,6 +664,7 @@ kcontext.setVariable("incident",_incident);]]></drools:script>
             <bpmn2:dataInputRefs>_D30B6785-61C5-4785-A672-B5C151053651_PayloadInputX</bpmn2:dataInputRefs>
             <bpmn2:dataInputRefs>_D30B6785-61C5-4785-A672-B5C151053651_TaskNameInputX</bpmn2:dataInputRefs>
           </bpmn2:inputSet>
+          <bpmn2:outputSet></bpmn2:outputSet>
         </bpmn2:ioSpecification>
         <bpmn2:dataInputAssociation id="_OEvTKFfTEemwcNEeVCT4gg">
           <bpmn2:targetRef>_D30B6785-61C5-4785-A672-B5C151053651_MessageTypeInputX</bpmn2:targetRef>
