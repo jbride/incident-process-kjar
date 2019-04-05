@@ -3,8 +3,8 @@
     <repository>
       <include>true</include>
       <metadata>
-        <id>repo1-D3Gq7hE9pxTiNhFU</id>
-        <url>http://nexus.tools.svc:8081/content/groups/public/</url>
+        <id>repo1-8FVf2I3GtZyGR84T</id>
+        <url>http://nexus.utils.svc:8081/content/groups/public/</url>
         <source>SETTINGS</source>
       </metadata>
     </repository>
