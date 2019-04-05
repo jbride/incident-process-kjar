@@ -370,7 +370,7 @@ kcontext.setVariable("mission",_mission);]]></drools:script>
           <drools:metaValue><![CDATA[Update Incident Aborted]]></drools:metaValue>
         </drools:metaData>
         <drools:onEntry-script scriptFormat="http://www.java.com/java">
-          <drools:script><![CDATA[com.redhat.cajun.navy.rules.model.Incident _incident = (com.redhat.cajun.navy.rules.model.Incident) kcontext.getVariable("incident);
+          <drools:script><![CDATA[com.redhat.cajun.navy.rules.model.Incident _incident = (com.redhat.cajun.navy.rules.model.Incident) kcontext.getVariable("incident");
 _incident.setStatus("Aborted");
 kcontext.setVariable("incident",_incident);]]></drools:script>
         </drools:onEntry-script>
@@ -526,7 +526,7 @@ kcontext.setVariable("nrAssignments", new Integer(i + 1));]]></bpmn2:script>
             <drools:metaValue><![CDATA[Update Incident Assigned]]></drools:metaValue>
           </drools:metaData>
           <drools:onEntry-script scriptFormat="http://www.java.com/java">
-            <drools:script><![CDATA[com.redhat.cajun.navy.rules.model.Incident _incident = (com.redhat.cajun.navy.rules.model.Incident) kcontext.getVariable("incident);
+            <drools:script><![CDATA[com.redhat.cajun.navy.rules.model.Incident _incident = (com.redhat.cajun.navy.rules.model.Incident) kcontext.getVariable("incident");
 _incident.setStatus("Assigned");
 kcontext.setVariable("incident",_incident);]]></drools:script>
           </drools:onEntry-script>
@@ -588,7 +588,7 @@ kcontext.setVariable("incident",_incident);]]></drools:script>
             <drools:metaValue><![CDATA[Update Incident Delivered]]></drools:metaValue>
           </drools:metaData>
           <drools:onEntry-script scriptFormat="http://www.java.com/java">
-            <drools:script><![CDATA[com.redhat.cajun.navy.rules.model.Incident _incident = (com.redhat.cajun.navy.rules.model.Incident) kcontext.getVariable("incident);
+            <drools:script><![CDATA[com.redhat.cajun.navy.rules.model.Incident _incident = (com.redhat.cajun.navy.rules.model.Incident) kcontext.getVariable("incident");
 _incident.setStatus("Delivered");
 kcontext.setVariable("incident",_incident);]]></drools:script>
           </drools:onEntry-script>
@@ -643,7 +643,7 @@ kcontext.setVariable("incident",_incident);]]></drools:script>
             <drools:metaValue><![CDATA[Update Incident PickedUp]]></drools:metaValue>
           </drools:metaData>
           <drools:onEntry-script scriptFormat="http://www.java.com/java">
-            <drools:script><![CDATA[com.redhat.cajun.navy.rules.model.Incident _incident = (com.redhat.cajun.navy.rules.model.Incident) kcontext.getVariable("incident);
+            <drools:script><![CDATA[com.redhat.cajun.navy.rules.model.Incident _incident = (com.redhat.cajun.navy.rules.model.Incident) kcontext.getVariable("incident");
 _incident.setStatus("PickedUp");
 kcontext.setVariable("incident",_incident);]]></drools:script>
           </drools:onEntry-script>
