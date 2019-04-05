@@ -613,7 +613,7 @@ kcontext.setVariable("incident",_incident);]]></drools:script>
         <bpmn2:dataInputAssociation id="_OEvTHFfTEemwcNEeVCT4gg">
           <bpmn2:targetRef>_76F16D10-53AE-490E-9819-9B33B7DF044A_MessageTypeInputX</bpmn2:targetRef>
           <bpmn2:assignment id="_OEvTHVfTEemwcNEeVCT4gg">
-            <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OEvTHlfTEemwcNEeVCT4gg"><![CDATA[UpdateMission]]></bpmn2:from>
+            <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OEvTHlfTEemwcNEeVCT4gg"><![CDATA[UpdateIncident]]></bpmn2:from>
             <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OEvTH1fTEemwcNEeVCT4gg">_76F16D10-53AE-490E-9819-9B33B7DF044A_MessageTypeInputX</bpmn2:to>
           </bpmn2:assignment>
         </bpmn2:dataInputAssociation>
@@ -669,12 +669,12 @@ kcontext.setVariable("incident",_incident);]]></drools:script>
         <bpmn2:dataInputAssociation id="_OEvTKFfTEemwcNEeVCT4gg">
           <bpmn2:targetRef>_D30B6785-61C5-4785-A672-B5C151053651_MessageTypeInputX</bpmn2:targetRef>
           <bpmn2:assignment id="_OEvTKVfTEemwcNEeVCT4gg">
-            <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OEvTKlfTEemwcNEeVCT4gg"><![CDATA[UpdateMission]]></bpmn2:from>
+            <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OEvTKlfTEemwcNEeVCT4gg"><![CDATA[UpdateIncident]]></bpmn2:from>
             <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OEvTK1fTEemwcNEeVCT4gg">_D30B6785-61C5-4785-A672-B5C151053651_MessageTypeInputX</bpmn2:to>
           </bpmn2:assignment>
         </bpmn2:dataInputAssociation>
         <bpmn2:dataInputAssociation id="_OEvTLFfTEemwcNEeVCT4gg">
-          <bpmn2:sourceRef>mission</bpmn2:sourceRef>
+          <bpmn2:sourceRef>incident</bpmn2:sourceRef>
           <bpmn2:targetRef>_D30B6785-61C5-4785-A672-B5C151053651_PayloadInputX</bpmn2:targetRef>
         </bpmn2:dataInputAssociation>
         <bpmn2:dataInputAssociation id="_OEvTLVfTEemwcNEeVCT4gg">
