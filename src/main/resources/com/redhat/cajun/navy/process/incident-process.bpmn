@@ -598,6 +598,7 @@ kcontext.setVariable("nrAssignments", new Integer(i + 1));]]></bpmn2:script>
           <bpmn2:dataInputRefs>_3771F44A-E29D-4ED6-BCBC-4349BDCA4734_PayloadInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_3771F44A-E29D-4ED6-BCBC-4349BDCA4734_TaskNameInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
+        <bpmn2:outputSet></bpmn2:outputSet>
       </bpmn2:ioSpecification>
       <bpmn2:dataInputAssociation id="_1-ogZGCGEemwcNEeVCT4gg">
         <bpmn2:targetRef>_3771F44A-E29D-4ED6-BCBC-4349BDCA4734_MessageTypeInputX</bpmn2:targetRef>
