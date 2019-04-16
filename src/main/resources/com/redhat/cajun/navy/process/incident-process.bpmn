@@ -155,7 +155,9 @@ return (!_isAvailable);]]></bpmn2:conditionExpression>
         </drools:metaData>
         <drools:onEntry-script scriptFormat="http://www.java.com/java">
           <drools:script><![CDATA[com.redhat.cajun.navy.rules.model.Mission _mission = (com.redhat.cajun.navy.rules.model.Mission)kcontext.getVariable("mission");
+com.redhat.cajun.navy.rules.model.Incident _incident = (com.redhat.cajun.navy.rules.model.Incident)kcontext.getVariable("incident");
 _mission.setStatus(com.redhat.cajun.navy.rules.model.Status.UNASSIGNED);
+_mission.setIncidentId(_incident.getId());
 kcontext.setVariable("mission", _mission);]]></drools:script>
         </drools:onEntry-script>
       </bpmn2:extensionElements>
