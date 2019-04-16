@@ -74,6 +74,18 @@
     "displayName" : "Responder Service",
     "icon" : "defaultservicenodeicon.png"
   ],
+  
+  [
+    "name" : "IncidentPriorityService",
+    "parameters" : [
+        "Incident" : new ObjectDataType()
+    ],    
+    "results" : [
+        "IncidentPriority" : new ObjectDataType(),
+    ],
+    "displayName" : "Incident Priority Service",
+    "icon" : "defaultservicenodeicon.png"
+  ],
 
   [
      "name" : "BusinessRuleTask",
