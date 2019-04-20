@@ -214,6 +214,11 @@ return (_isAvailable);]]></bpmn2:conditionExpression>
 com.redhat.cajun.navy.rules.model.Incident _incident = (com.redhat.cajun.navy.rules.model.Incident)kcontext.getVariable("incident"); 
 _mission.setStatus(com.redhat.cajun.navy.rules.model.Status.UNASSIGNED);
 _mission.setIncidentId(_incident.getId());
+_mission.setResponderId(null);
+_mission.setResponderStartLat(null);
+_mission.setResponderStartLong(null);
+_mission.setDestinationLat(null);
+_mission.setDestinationLong(null);
 kcontext.setVariable("mission", _mission);]]></drools:script>
         </drools:onEntry-script>
       </bpmn2:extensionElements>
