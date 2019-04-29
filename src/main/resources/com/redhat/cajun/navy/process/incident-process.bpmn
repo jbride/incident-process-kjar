@@ -471,6 +471,9 @@ kcontext.setVariable("mission", _mission);]]></drools:script>
     </bpmn2:scriptTask>
     <bpmn2:task id="_0B80F528-BF03-4FB3-A670-54948F83F2CD" drools:taskName="ResponderService" name="Get Active Responders">
       <bpmn2:extensionElements>
+        <drools:metaData name="customAsync">
+          <drools:metaValue><![CDATA[true]]></drools:metaValue>
+        </drools:metaData>
         <drools:metaData name="elementname">
           <drools:metaValue><![CDATA[Get Active Responders]]></drools:metaValue>
         </drools:metaData>
@@ -752,7 +755,7 @@ kcontext.setVariable("incident",_incident);]]></drools:script>
             <bpmn2:dataInputRefs>_93C12473-05B0-4FEB-B870-33241B2BE8AB_MessageTypeInputX</bpmn2:dataInputRefs>
             <bpmn2:dataInputRefs>_93C12473-05B0-4FEB-B870-33241B2BE8AB_PayloadInputX</bpmn2:dataInputRefs>
             <bpmn2:dataInputRefs>_93C12473-05B0-4FEB-B870-33241B2BE8AB_TaskNameInputX</bpmn2:dataInputRefs>
-          </bpmn2:inputSet>
+          </bpmn2:inputSet>F
           <bpmn2:outputSet></bpmn2:outputSet>
         </bpmn2:ioSpecification>
         <bpmn2:dataInputAssociation id="_5LrpbGqqEemh77yK8W9ROQ">
