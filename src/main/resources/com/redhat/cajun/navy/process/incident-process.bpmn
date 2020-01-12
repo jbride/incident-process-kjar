@@ -250,6 +250,8 @@ _mission.setResponderStartLat(null);
 _mission.setResponderStartLong(null);
 _mission.setDestinationLat(null);
 _mission.setDestinationLong(null);
+_mission.setIncidentLat(_incident.getLatitude());
+_mission.setIncidentLong(_incident.getLongitude());
 kcontext.setVariable("mission", _mission);]]></drools:script>
         </drools:onEntry-script>
       </bpmn2:extensionElements>
