@@ -98,7 +98,8 @@ return (_mission.getStatus() == com.redhat.cajun.navy.rules.model.Status.UNASSIG
         </drools:metaData>
       </bpmn2:extensionElements>
     </bpmn2:sequenceFlow>
-    <bpmn2:sequenceFlow id="_C3E80BB7-F7A8-4610-AEFC-CDADCA7D1E05" sourceRef="_6ACB675A-AF1D-490C-B387-A3579700695A" targetRef="_2D339675-C539-4198-93FA-F6524BBFCA4B"/>
+    <bpmn2:sequenceFlow id="_F586993A-931C-4F78-97F9-EBB820E1F362" sourceRef="_D5588081-BEED-4A05-937B-81A64B4BC44A" targetRef="_2D339675-C539-4198-93FA-F6524BBFCA4B" />
+    <bpmn2:sequenceFlow id="_C3E80BB7-F7A8-4610-AEFC-CDADCA7D1E05" sourceRef="_6ACB675A-AF1D-490C-B387-A3579700695A" targetRef="_D5588081-BEED-4A05-937B-81A64B4BC44A" />  
     <bpmn2:sequenceFlow id="_82002523-5129-4DA5-9923-6B0CB3FE2E7B" sourceRef="_0B80F528-BF03-4FB3-A670-54948F83F2CD" targetRef="_C833B833-CD98-494F-A7B3-8F1FA5C79032"/>
     <bpmn2:sequenceFlow id="_597CBFBE-020D-4449-B064-175E977ED5BE" sourceRef="_2D339675-C539-4198-93FA-F6524BBFCA4B" targetRef="_0B80F528-BF03-4FB3-A670-54948F83F2CD"/>
     <bpmn2:sequenceFlow id="_2DAF18ED-ED45-47B9-8E96-19C8873A7370" sourceRef="_7D98268D-FD97-4C06-A9D4-CCCF9919D5D7" targetRef="_DBCF20C3-4FB8-4D62-8C99-C7F90444211B"/>
@@ -457,7 +458,7 @@ kcontext.setVariable("mission", _mission);]]></drools:script>
       </bpmn2:dataInputAssociation>
     </bpmn2:task>
     <bpmn2:exclusiveGateway id="_2D339675-C539-4198-93FA-F6524BBFCA4B" gatewayDirection="Converging">
-      <bpmn2:incoming>_C3E80BB7-F7A8-4610-AEFC-CDADCA7D1E05</bpmn2:incoming>
+      <bpmn2:incoming>_F586993A-931C-4F78-97F9-EBB820E1F362</bpmn2:incoming>
       <bpmn2:incoming>_AB87272A-C9B6-4621-9A24-97A4D413BF3C</bpmn2:incoming>
       <bpmn2:outgoing>_597CBFBE-020D-4449-B064-175E977ED5BE</bpmn2:outgoing>
     </bpmn2:exclusiveGateway>
@@ -471,6 +472,42 @@ kcontext.setVariable("mission", _mission);]]></drools:script>
       <bpmn2:outgoing>_C3E80BB7-F7A8-4610-AEFC-CDADCA7D1E05</bpmn2:outgoing>
       <bpmn2:script><![CDATA[kcontext.setVariable("nrAssignments", new Integer(0));]]></bpmn2:script>
     </bpmn2:scriptTask>
+
+
+
+    <bpmn2:task id="_D5588081-BEED-4A05-937B-81A64B4BC44A" drools:taskName="DisasterService" name="Get Shelters">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Get Shelters]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_C3E80BB7-F7A8-4610-AEFC-CDADCA7D1E05</bpmn2:incoming>
+      <bpmn2:outgoing>_F586993A-931C-4F78-97F9-EBB820E1F362</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="_E-g-M1DtEeqfIo_m8z1NPA">
+        <bpmn2:dataInput id="_D5588081-BEED-4A05-937B-81A64B4BC44A_TaskNameInputX" drools:dtype="Object" name="TaskName"/>
+        <bpmn2:dataOutput id="_D5588081-BEED-4A05-937B-81A64B4BC44A_destinationsOutputX" drools:dtype="java.lang.Object" itemSubjectRef="__D5588081-BEED-4A05-937B-81A64B4BC44A_destinationsOutputXItem" name="destinations"/>
+        <bpmn2:inputSet id="_E-g-NFDtEeqfIo_m8z1NPA">
+          <bpmn2:dataInputRefs>_D5588081-BEED-4A05-937B-81A64B4BC44A_TaskNameInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_E-g-NVDtEeqfIo_m8z1NPA">
+          <bpmn2:dataOutputRefs>_D5588081-BEED-4A05-937B-81A64B4BC44A_destinationsOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_E-g-NlDtEeqfIo_m8z1NPA">
+        <bpmn2:targetRef>_D5588081-BEED-4A05-937B-81A64B4BC44A_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_E-g-N1DtEeqfIo_m8z1NPA">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_E-g-OFDtEeqfIo_m8z1NPA"><![CDATA[DisasterService]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_E-g-OVDtEeqfIo_m8z1NPA">_D5588081-BEED-4A05-937B-81A64B4BC44A_TaskNameInputX</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_E-g-OlDtEeqfIo_m8z1NPA">
+        <bpmn2:sourceRef>_D5588081-BEED-4A05-937B-81A64B4BC44A_destinationsOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>destinations</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:task>
+
+
+
     <bpmn2:task id="_0B80F528-BF03-4FB3-A670-54948F83F2CD" drools:taskName="ResponderService" name="Get Active Responders">
       <bpmn2:extensionElements>
         <drools:metaData name="customAsync">
@@ -940,6 +977,9 @@ kcontext.setVariable("incident",_incident);]]></drools:script>
       <bpmndi:BPMNShape id="shape__E5D11F7E-2348-4089-8699-253E52D9ABFD" bpmnElement="_E5D11F7E-2348-4089-8699-253E52D9ABFD">
         <dc:Bounds height="56.0" width="56.0" x="332.5" y="725.0"/>
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__D5588081-BEED-4A05-937B-81A64B4BC44A" bpmnElement="_D5588081-BEED-4A05-937B-81A64B4BC44A">
+        <dc:Bounds height="102.0" width="154.0" x="196.0" y="235.0"/>
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="edge_shape__6DF42BBE-29BC-4CA0-800C-BD2FF5B30934_to_shape__D30B6785-61C5-4785-A672-B5C151053651" bpmnElement="_E156768B-196E-43B0-BE3C-2E099568D228">
         <di:waypoint xsi:type="dc:Point" x="869.0" y="753.0"/>
         <di:waypoint xsi:type="dc:Point" x="937.0" y="753.0"/>
@@ -1096,9 +1136,13 @@ kcontext.setVariable("incident",_incident);]]></drools:script>
         <di:waypoint xsi:type="dc:Point" x="585.0" y="128.0"/>
         <di:waypoint xsi:type="dc:Point" x="769.0" y="128.0"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="edge_shape__6ACB675A-AF1D-490C-B387-A3579700695A_to_shape__2D339675-C539-4198-93FA-F6524BBFCA4B" bpmnElement="_C3E80BB7-F7A8-4610-AEFC-CDADCA7D1E05">
+      <bpmndi:BPMNEdge id="edge_shape__6ACB675A-AF1D-490C-B387-A3579700695A_to_shape__D5588081-BEED-4A05-937B-81A64B4BC44A" bpmnElement="_C3E80BB7-F7A8-4610-AEFC-CDADCA7D1E05">
         <di:waypoint xsi:type="dc:Point" x="273.0" y="128.0"/>
-        <di:waypoint xsi:type="dc:Point" x="429.0" y="128.0"/>
+        <di:waypoint xsi:type="dc:Point" x="273.0" y="235.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__D5588081-BEED-4A05-937B-81A64B4BC44A_to_shape__2D339675-C539-4198-93FA-F6524BBFCA4B" bpmnElement="_F586993A-931C-4F78-97F9-EBB820E1F362">
+        <di:waypoint xsi:type="dc:Point" x="350.0" y="286.0"/>
+        <di:waypoint xsi:type="dc:Point" x="401.0" y="128.0"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__A3B5991F-1034-4DEE-B17A-F392EC47AC47_to_shape__2D339675-C539-4198-93FA-F6524BBFCA4B" bpmnElement="_AB87272A-C9B6-4621-9A24-97A4D413BF3C">
         <di:waypoint xsi:type="dc:Point" x="457.0" y="349.0"/>
