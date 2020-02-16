@@ -74,15 +74,6 @@
     "displayName" : "Responder Service",
     "icon" : "defaultservicenodeicon.png"
   ],
-
-  [
-    "name" : "DisasterService",
-    "results" : [
-        "destinations" : new ObjectDataType(),
-    ],
-    "displayName" : "Disaster Service",
-    "icon" : "defaultservicenodeicon.png"
-  ],
   
   [
     "name" : "IncidentPriorityService",
