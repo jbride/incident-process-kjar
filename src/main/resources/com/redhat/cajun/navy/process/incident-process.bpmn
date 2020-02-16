@@ -458,7 +458,7 @@ kcontext.setVariable("mission", _mission);]]></drools:script>
       </bpmn2:dataInputAssociation>
     </bpmn2:task>
     <bpmn2:exclusiveGateway id="_2D339675-C539-4198-93FA-F6524BBFCA4B" gatewayDirection="Converging">
-      <bpmn2:incoming>_F586993A-931C-4F78-97F9-EBB820E1F362</bpmn2:incoming>
+      <bpmn2:incoming>_C3E80BB7-F7A8-4610-AEFC-CDADCA7D1E05</bpmn2:incoming>
       <bpmn2:incoming>_AB87272A-C9B6-4621-9A24-97A4D413BF3C</bpmn2:incoming>
       <bpmn2:outgoing>_597CBFBE-020D-4449-B064-175E977ED5BE</bpmn2:outgoing>
     </bpmn2:exclusiveGateway>
