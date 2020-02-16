@@ -287,7 +287,7 @@ kcontext.setVariable("mission", _mission);]]></drools:script>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
     </bpmn2:task>
-    <bpmn2:businessRuleTask id="_094B43BD-DDA1-49D3-B554-422EF1F9A610" drools:ruleFlowGroup="default" name="Assign Mission">
+    <bpmn2:task id="_094B43BD-DDA1-49D3-B554-422EF1F9A610" drools:taskName="BusinessRuleTask" name="Assign Mission">
       <bpmn2:extensionElements>
         <drools:metaData name="elementname">
           <drools:metaValue><![CDATA[Assign Mission]]></drools:metaValue>
@@ -373,7 +373,7 @@ kcontext.setVariable("mission", _mission);]]></drools:script>
         <bpmn2:sourceRef>_094B43BD-DDA1-49D3-B554-422EF1F9A610_MissionOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>mission</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
-    </bpmn2:businessRuleTask>
+    </bpmn2:task>
     <bpmn2:intermediateCatchEvent id="_17ADEC3A-D8FE-4025-B87F-825F5E77D3F2" name="timer">
       <bpmn2:extensionElements>
         <drools:metaData name="elementname">
