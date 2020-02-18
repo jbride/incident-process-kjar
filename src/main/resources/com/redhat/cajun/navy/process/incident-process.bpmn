@@ -37,6 +37,7 @@
   <bpmn2:itemDefinition id="__A79DD4BE-6BD3-47FE-A036-536C1C9B9D7A_PayloadInputXItem" structureRef="java.lang.Object"/>
   <bpmn2:itemDefinition id="__C833B833-CD98-494F-A7B3-8F1FA5C79032_IncidentInputXItem" structureRef="java.lang.Object"/>
   <bpmn2:itemDefinition id="__C833B833-CD98-494F-A7B3-8F1FA5C79032_IncidentPriorityOutputXItem" structureRef="java.lang.Object"/>
+  <bpmn2:itemDefinition id="__D5588081-BEED-4A05-937B-81A64B4BC44A_destinationsOutputXItem" structureRef="java.lang.Object"/>
   <bpmn2:signal id="_b17f0abb-f76e-39b6-af1f-9902eb4529dd" name="VictimDelivered"/>
   <bpmn2:signal id="_e161207a-a1bd-3101-830b-ff19dc6d3c4f" name="VictimPickedUp"/>
   <bpmn2:signal id="_0f1a3c6a-b90f-39c1-aa93-8fb23bb7526c" name="MissionStarted"/>
@@ -1309,6 +1310,26 @@ kcontext.setVariable("incident",_incident);]]></drools:script>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
           <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_6ACB675A-AF1D-490C-B387-A3579700695A" id="_5LrpmWqqEemh77yK8W9ROQ">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters xsi:type="bpsim:ResourceParameters">
+              <bpsim:Availability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_D5588081-BEED-4A05-937B-81A64B4BC44A" id="_E_ICRVDtEeqfIo_m8z1NPA">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
