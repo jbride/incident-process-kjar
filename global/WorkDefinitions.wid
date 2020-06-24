@@ -63,7 +63,7 @@
         "Payload" : new ObjectDataType()
     ],
     "displayName" : "Send Kafka Message",
-    "icon" : "defaultservicenodeicon.png"
+    "icon" : "sendkafkaicon.png"
   ],
   
   [
@@ -72,7 +72,7 @@
         "Responders" : new ObjectDataType(),
     ],
     "displayName" : "Responder Service",
-    "icon" : "defaultservicenodeicon.png"
+    "icon" : "respondericon.png"
   ],
 
   [
@@ -81,7 +81,7 @@
         "destinations" : new ObjectDataType(),
     ],
     "displayName" : "Disaster Service",
-    "icon" : "defaultservicenodeicon.png"
+    "icon" : "disasterservicenodeicon.png"
   ],
   
   [
@@ -93,7 +93,7 @@
         "IncidentPriority" : new ObjectDataType(),
     ],
     "displayName" : "Incident Priority Service",
-    "icon" : "defaultservicenodeicon.png"
+    "icon" : "incidentpriorityicon.png"
   ],
 
   [
